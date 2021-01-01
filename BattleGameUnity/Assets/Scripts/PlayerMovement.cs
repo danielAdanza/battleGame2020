@@ -73,11 +73,11 @@ public class PlayerMovement : MonoBehaviour
             //applying the rotation
             if (direction.magnitude >= 0.1f)
             {
-                float turnSmoothTime = 0.1f;
+                float turnSmoothTime = 0.02f;
                 //this is the war angle where the player moves
                 float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
                 //this is an smoother angle which progresively rotates his head
-                float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothTime, 0.1f);
+                float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothTime, 0.02f);
 
                 transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
@@ -195,7 +195,6 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.W) && isGrounded)
             {
                 velocity.y += Mathf.Sqrt(jumpHeight * -2.0f * gravity);
-                TakeDamage(3);
             }
 
             //run
@@ -260,7 +259,6 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.O) && isGrounded)
             {
                 velocity.y += Mathf.Sqrt(jumpHeight * -2.0f * gravity);
-                TakeDamage(3);
             }
         }
     }
