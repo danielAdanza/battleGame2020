@@ -14,6 +14,19 @@ public class MenuManager : MonoBehaviour
     public GameObject scenarioGameObject;
     public GameObject gameModeGameObject;
 
+    //Game Mode Section
+    public Text numberOfLifes;
+    public Text numberOfMinutes;
+
+    public void Start()
+    {
+        characterImage.color = Color.yellow;
+
+        PlayerPrefs.SetString("gameMode", "lifes");
+        PlayerPrefs.SetInt("numberOfLifes", 3);
+        PlayerPrefs.SetInt("numberOfMinutes", 3);
+    }
+
     public void WhenCharacterIsClicked ()
     {
         characterImage.color = Color.yellow;
@@ -50,5 +63,35 @@ public class MenuManager : MonoBehaviour
     public void WhenPlayIsClicked()
     {
         SceneManager.LoadScene("BattleScene");
+    }
+
+    public void ChangeLifes (int number)
+    {
+        int lifes = PlayerPrefs.GetInt("numberOfLifes") + number;
+
+        //controlling the maximum and the minimum for the lifes
+        if (lifes < 0)
+        { lifes = 0; }
+        else if (lifes > 50)
+        { lifes = 50;  }
+
+        PlayerPrefs.SetInt("numberOfLifes", lifes);
+
+        numberOfLifes.text = "" + PlayerPrefs.GetInt("numberOfLifes");
+    }
+
+    public void ChangeMinutes(int number)
+    {
+        int minutes = PlayerPrefs.GetInt("numberOfMinutes") + number;
+
+        //controlling the maximum and the minimum for the lifes
+        if (minutes < 0)
+        { minutes = 0; }
+        else if (minutes > 50)
+        { minutes = 50;  }
+
+        PlayerPrefs.SetInt("numberOfMinutes", minutes );
+
+        numberOfMinutes.text = "" + PlayerPrefs.GetInt("numberOfMinutes");
     }
 }

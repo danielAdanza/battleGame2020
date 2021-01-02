@@ -25,8 +25,7 @@ public class DistantAttacks : MonoBehaviour
         //if it is the player then respawn it
         if (other.gameObject.layer == 9 && other.gameObject.tag != tagName)
         {
-            other.gameObject.GetComponent<PlayerMovement>().TakeDamage(damage);
-            Destroy(this.gameObject);
+            other.gameObject.GetComponent<PlayerMovement>().TakeDamage(damage, this.tagName, this.gameObject.transform.rotation);
         }
     }
 }

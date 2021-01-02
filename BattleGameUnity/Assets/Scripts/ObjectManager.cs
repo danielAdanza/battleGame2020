@@ -14,10 +14,6 @@ public class ObjectManager : MonoBehaviour
     void Start()
     {
         pickNextItem();
-
-        Debug.Log(itemIndex);
-        Debug.Log(spawnIndex);
-        Debug.Log(timeNextItem);
     }
 
     // Update is called once per frame
@@ -28,10 +24,6 @@ public class ObjectManager : MonoBehaviour
             pickNextItem();
 
             Instantiate(items[itemIndex], spawnPositions[spawnIndex].position, Quaternion.identity);
-
-            Debug.Log(itemIndex);
-            Debug.Log(spawnIndex);
-            Debug.Log(timeNextItem);
         }
     }
 

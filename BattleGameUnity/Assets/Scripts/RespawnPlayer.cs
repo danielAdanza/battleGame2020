@@ -10,7 +10,7 @@ public class RespawnPlayer : MonoBehaviour
         //if it is the player then respawn it
         if(other.gameObject.layer == 9)
         {
-            other.gameObject.GetComponent<PlayerMovement>().TakeDamage(1000);
+            other.gameObject.GetComponent<PlayerMovement>().TakeDamage(1000,"scenario", Quaternion.identity);
         }
     }
 }

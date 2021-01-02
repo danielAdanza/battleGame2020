@@ -111,21 +111,25 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void TakeDamage (int damage)
+    public void TakeDamage (int damage, string agresorTag, Quaternion rotation)
     {
-        health -= damage;
-
-        //after taking damage or recuperating life health should never be less than 0 or more than the maxHealth
-        if (health > maxHealth)
-        { health = maxHealth; }
-        else if (health < 0)
-        { health = 0; }
-
-        marksController.SetHealth(health);
-        if (health <= 0)
+        Debug.Log(agresorTag);
+        Debug.Log(rotation);
+        if (canMove == true)
         {
-            respawn();
+            health -= damage;
+
+            //after taking damage or recuperating life health should never be less than 0 or more than the maxHealth
+            if (health > maxHealth)
+            { health = maxHealth; }
+            else if (health < 0)
+            { health = 0; }
+
+            marksController.SetHealth(health);
+            if (health <= 0)
+            { respawn(); }
         }
+
     }
 
     void respawn ()
@@ -144,20 +148,20 @@ public class PlayerMovement : MonoBehaviour
 
         if (playerNumber == 1)
         {
-            if (Input.GetKey(KeyCode.F))
-            { horizontal = horizontal - 1f; }
-
-            if (Input.GetKey(KeyCode.H))
-            { horizontal = horizontal + 1f; }
-
-            if (Input.GetKey(KeyCode.G))
-            { vertical = vertical - 1f; }
-
-            if (Input.GetKey(KeyCode.T))
+            if (Input.GetKey(KeyCode.W))
             { vertical = vertical + 1f; }
 
-            //Distant attack
+            if (Input.GetKey(KeyCode.A))
+            { horizontal = horizontal - 1f; }
+
             if (Input.GetKey(KeyCode.S))
+            { vertical = vertical - 1f; }
+
+            if (Input.GetKey(KeyCode.D))
+            { horizontal = horizontal + 1f; }
+
+            //Distant attack
+            if (Input.GetKey(KeyCode.K))
             {
                 // we can only make one attack for each 0.75 seconds
                 if (nextAttack <= Time.time)
@@ -169,7 +173,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
             //melee attack
-            if (Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.L))
             {
                 // we can only make one attack for each 0.5 seconds
                 if (nextAttack <= Time.time)
@@ -181,24 +185,23 @@ public class PlayerMovement : MonoBehaviour
 
                     foreach(Collider enemy in hitEnemies)
                     {
-                        Debug.Log("you hit "+  enemy.name);
                         //checking if it hits the other players but not the current one
                         if (enemy.gameObject.layer == 9 && enemy.gameObject.tag != tagName)
                         {
-                            enemy.gameObject.GetComponent<PlayerMovement>().TakeDamage(attack);
+                            enemy.gameObject.GetComponent<PlayerMovement>().TakeDamage(attack, this.tagName, this.gameObject.transform.rotation);
                         }
                     }
                 }
             }
 
             //Jump
-            if (Input.GetKeyDown(KeyCode.W) && isGrounded)
+            if (Input.GetKeyDown(KeyCode.I) && isGrounded)
             {
                 velocity.y += Mathf.Sqrt(jumpHeight * -2.0f * gravity);
             }
 
             //run
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.J))
             { isRunning = true; }
         }
         else if (playerNumber == 2)
@@ -217,11 +220,11 @@ public class PlayerMovement : MonoBehaviour
 
 
             //running
-            if (Input.GetKey(KeyCode.K))
+            if (Input.GetKey(KeyCode.Keypad4))
             { isRunning = true; }
 
             //melee attack
-            if (Input.GetKey(KeyCode.P))
+            if (Input.GetKey(KeyCode.Keypad6))
             {
                 // we can only make one attack for each 0.5 seconds
                 if (nextAttack <= Time.time)
@@ -237,14 +240,14 @@ public class PlayerMovement : MonoBehaviour
                         //checking if it hits the other players but not the current one
                         if (enemy.gameObject.layer == 9 && enemy.gameObject.tag != tagName)
                         {
-                            enemy.gameObject.GetComponent<PlayerMovement>().TakeDamage(attack);
+                            enemy.gameObject.GetComponent<PlayerMovement>().TakeDamage(attack,this.tagName, this.gameObject.transform.rotation);
                         }
                     }
                 }
             }
 
             //Distant attack
-            if (Input.GetKey(KeyCode.L))
+            if (Input.GetKey(KeyCode.Keypad5))
             {
                 // we can only make one attack for each 0.75 seconds
                 if (nextAttack <= Time.time)
@@ -256,10 +259,24 @@ public class PlayerMovement : MonoBehaviour
             }
 
             //Jump
-            if (Input.GetKeyDown(KeyCode.O) && isGrounded)
+            if (Input.GetKeyDown(KeyCode.Keypad8) && isGrounded)
             {
                 velocity.y += Mathf.Sqrt(jumpHeight * -2.0f * gravity);
             }
+        }
+        else if (playerNumber == 3)
+        {
+            if (Input.GetKey(KeyCode.Joystick1Button0))
+            { horizontal = horizontal - 1f; }
+
+            if (Input.GetKey(KeyCode.Joystick1Button1))
+            { horizontal = horizontal + 1f; }
+
+            if (Input.GetKey(KeyCode.Joystick1Button2))
+            { vertical = vertical - 1f; }
+
+            if (Input.GetKey(KeyCode.Joystick1Button3))
+            { vertical = vertical + 1f; }
         }
     }
 

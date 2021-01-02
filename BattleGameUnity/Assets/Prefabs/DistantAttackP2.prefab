@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DistantAttackP2
       objectReference: {fileID: 0}
+    - target: {fileID: 9137839162956443112, guid: 25a6a7737f513094d9aa0d4e07974b5d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player2
+      objectReference: {fileID: 0}
     - target: {fileID: 9137839162956443117, guid: 25a6a7737f513094d9aa0d4e07974b5d,
         type: 3}
       propertyPath: m_LocalPosition.x

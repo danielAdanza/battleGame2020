@@ -18,7 +18,7 @@ public class liveAndDamageObject : MonoBehaviour
         //if it is the player then respawn it
         if (other.gameObject.layer == 9)
         {
-            other.gameObject.GetComponent<PlayerMovement>().TakeDamage(damage);
+            other.gameObject.GetComponent<PlayerMovement>().TakeDamage(damage, "scenario", Quaternion.identity);
             Destroy(this.gameObject);
         }
     }

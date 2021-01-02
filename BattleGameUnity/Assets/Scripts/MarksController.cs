@@ -15,7 +15,6 @@ public class MarksController : MonoBehaviour
 
     public void Start ()
     {
-        PlayerPrefs.SetInt("numberOfLifes", 3);
         totalDeaths = PlayerPrefs.GetInt("numberOfLifes");
         healthBarImage.color = gradient.Evaluate(1f);
         totalDeathsText.text = "" + totalDeaths;
