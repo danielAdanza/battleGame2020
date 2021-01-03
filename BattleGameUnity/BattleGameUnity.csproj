@@ -626,6 +626,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\DistantAttacks.cs" />
+    <Compile Include="Assets\Scripts\GenericMarksController.cs" />
     <Compile Include="Assets\Scripts\liveAndDamageObject.cs" />
     <Compile Include="Assets\Scripts\MarksController.cs" />
     <Compile Include="Assets\Scripts\MenuScrips\MenuManager.cs" />

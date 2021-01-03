@@ -30,6 +30,9 @@ public class PlayerMovement : MonoBehaviour
     public int attack;
     public int distantAttack;
     public GameObject distantAttackObject;
+    //it indicates the force that it will be pushed when they attack him
+    //2f would be the standard 1.5 would be heavy and 2.5 would be thin
+    public float bodyMass = 2f;
 
     private float horizontal = 0f;
     private float vertical = 0f;
@@ -126,8 +129,21 @@ public class PlayerMovement : MonoBehaviour
             { health = 0; }
 
             marksController.SetHealth(health);
+
             if (health <= 0)
             { respawn(); }
+
+            if ( damage > 0 & agresorTag != "scenario" )
+            {
+                //calculating the added force depending on the life remaining. The added force will be within 3 and 6:
+                //3 would be if you have zero life and 6 is if you have no life remaining
+                float forceFromLife = ( (3f * health) / maxHealth + 3 );
+                //they could push different depending on the scenarios
+                float scenarioForce = 5f;
+                //we get pushed and we give the direction multiplied by the forward vector, we input time.deltaTime so it does not depend on the frames
+                //the damage of the attack and the amount of life remaining 
+                controller.Move(rotation * Vector3.forward * Time.deltaTime * damage * bodyMass * forceFromLife * scenarioForce);
+            }
         }
 
     }
@@ -276,6 +292,20 @@ public class PlayerMovement : MonoBehaviour
             { vertical = vertical - 1f; }
 
             if (Input.GetKey(KeyCode.Joystick1Button3))
+            { vertical = vertical + 1f; }
+        }
+        else if (playerNumber == 4)
+        {
+            if (Input.GetKey(KeyCode.Joystick2Button0))
+            { horizontal = horizontal - 1f; }
+
+            if (Input.GetKey(KeyCode.Joystick2Button1))
+            { horizontal = horizontal + 1f; }
+
+            if (Input.GetKey(KeyCode.Joystick2Button2))
+            { vertical = vertical - 1f; }
+
+            if (Input.GetKey(KeyCode.Joystick2Button3))
             { vertical = vertical + 1f; }
         }
     }

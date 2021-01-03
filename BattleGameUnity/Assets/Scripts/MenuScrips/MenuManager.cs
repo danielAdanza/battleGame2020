@@ -17,12 +17,13 @@ public class MenuManager : MonoBehaviour
     //Game Mode Section
     public Text numberOfLifes;
     public Text numberOfMinutes;
+    public Image lifesImage;
+    public Image minutesImage;
 
     public void Start()
     {
         characterImage.color = Color.yellow;
 
-        PlayerPrefs.SetString("gameMode", "lifes");
         PlayerPrefs.SetInt("numberOfLifes", 3);
         PlayerPrefs.SetInt("numberOfMinutes", 3);
     }
@@ -94,4 +95,29 @@ public class MenuManager : MonoBehaviour
 
         numberOfMinutes.text = "" + PlayerPrefs.GetInt("numberOfMinutes");
     }
+
+    public void ChangeGameMode (string gamemode)
+    {
+        if (gamemode == "lifes")
+        {
+            lifesImage.color = Color.yellow;
+            minutesImage.color = Color.white;
+            PlayerPrefs.SetString("gameMode", gamemode);
+
+        }
+        else if (gamemode == "time")
+        {
+            lifesImage.color = Color.white;
+            minutesImage.color = Color.yellow;
+            PlayerPrefs.SetString("gameMode", gamemode);
+        }
+    }
+
+    public void changeControllers(int player, int mode)
+    {
+        PlayerPrefs.SetInt("controlsPlayer" + player, mode);
+
+        Debug.Log( "controlsPlayer" + player );
+        Debug.Log( PlayerPrefs.GetInt("controlsPlayer" + player ) );
+    } 
 }

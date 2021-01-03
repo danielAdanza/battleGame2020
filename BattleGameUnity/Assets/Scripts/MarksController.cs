@@ -10,8 +10,7 @@ public class MarksController : MonoBehaviour
     public Image healthBarImage;
     public Text totalDeathsText;
     private int totalDeaths = 0;
-    public GameObject pauseMenuUI;
-    public Text pauseMenuText;
+    public GenericMarksController genericMarks;
 
     public void Start ()
     {
@@ -42,8 +41,7 @@ public class MarksController : MonoBehaviour
 
         if (totalDeaths <= 0)
         {
-            pauseMenuUI.SetActive(true);
-            pauseMenuText.text = "GAME OVER \n\n" +this.gameObject.name + " looses";
+            genericMarks.WhenGameOver();
         }
     }
 }
