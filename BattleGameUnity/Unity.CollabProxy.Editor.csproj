@@ -262,11 +262,11 @@
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>C:/Users/Lenovo/Desktop/apuntes/videojuego/2020/BattleGame/BattleGameUnity/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.Purchasing">
-      <HintPath>C:/Users/Lenovo/Desktop/apuntes/videojuego/2020/BattleGame/BattleGameUnity/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
-    </Reference>
     <Reference Include="clipper_library">
       <HintPath>C:/Users/Lenovo/Desktop/apuntes/videojuego/2020/BattleGame/BattleGameUnity/Library/PackageCache/com.unity.cinemachine@2.7.1/Runtime/ThirdParty/clipper_library.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Purchasing">
+      <HintPath>C:/Users/Lenovo/Desktop/apuntes/videojuego/2020/BattleGame/BattleGameUnity/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.1.9f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>
@@ -659,6 +659,9 @@
     <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryLight.uss" />
     <None Include="Packages\com.unity.collab-proxy\Editor\Unity.CollabProxy.Editor.asmdef" />
     <None Include="Packages\com.unity.collab-proxy\Tests\Editor\Unity.CollabProxy.EditorTests.asmdef" />
+    <None Include="Packages\com.unity.inputsystem\InputSystem\Unity.InputSystem.asmdef" />
+    <None Include="Packages\com.unity.inputsystem\Tests\IntegrationTests\Unity.InputSystem.IntegrationTests.asmdef" />
+    <None Include="Packages\com.unity.inputsystem\Tests\TestFixture\Unity.InputSystem.TestFramework.asmdef" />
     <None Include="Packages\com.unity.purchasing\Tests\Editor\Unity.IAP.purchasing.EditorTests.asmdef" />
     <None Include="Packages\com.unity.purchasing\Tests\Runtime\Unity.IAP.purchasing.RunTimeTests.asmdef" />
     <None Include="Packages\com.unity.textmeshpro\Editor Resources\Shaders\TMP_Properties.cginc" />

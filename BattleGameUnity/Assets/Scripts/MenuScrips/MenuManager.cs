@@ -26,6 +26,7 @@ public class MenuManager : MonoBehaviour
 
         PlayerPrefs.SetInt("numberOfLifes", 3);
         PlayerPrefs.SetInt("numberOfMinutes", 3);
+        PlayerPrefs.SetString("mode", "lifes");
     }
 
     public void WhenCharacterIsClicked ()

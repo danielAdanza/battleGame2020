@@ -599,6 +599,10 @@
       <Project>{D9EEBEDB-DFC3-5129-AB48-409427AE8119}</Project>
       <Name>Cinemachine</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.InputSystem.csproj">
+      <Project>{6DC5BF4B-76C6-D81C-D2ED-DCF0BFB1AA66}</Project>
+      <Name>Unity.InputSystem</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
       <Project>{3A848AB7-9891-EDDA-D555-BF184C2F81F4}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
@@ -631,6 +635,7 @@
     <Compile Include="Assets\Scripts\MarksController.cs" />
     <Compile Include="Assets\Scripts\MenuScrips\MenuManager.cs" />
     <Compile Include="Assets\Scripts\ObjectManager.cs" />
+    <Compile Include="Assets\Scripts\PlayerInputControls.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\RespawnPlayer.cs" />
   </ItemGroup>
@@ -651,6 +656,9 @@
     <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryLight.uss" />
     <None Include="Packages\com.unity.collab-proxy\Editor\Unity.CollabProxy.Editor.asmdef" />
     <None Include="Packages\com.unity.collab-proxy\Tests\Editor\Unity.CollabProxy.EditorTests.asmdef" />
+    <None Include="Packages\com.unity.inputsystem\InputSystem\Unity.InputSystem.asmdef" />
+    <None Include="Packages\com.unity.inputsystem\Tests\IntegrationTests\Unity.InputSystem.IntegrationTests.asmdef" />
+    <None Include="Packages\com.unity.inputsystem\Tests\TestFixture\Unity.InputSystem.TestFramework.asmdef" />
     <None Include="Packages\com.unity.purchasing\Tests\Editor\Unity.IAP.purchasing.EditorTests.asmdef" />
     <None Include="Packages\com.unity.purchasing\Tests\Runtime\Unity.IAP.purchasing.RunTimeTests.asmdef" />
     <None Include="Packages\com.unity.textmeshpro\Editor Resources\Shaders\TMP_Properties.cginc" />

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float walkSpeed = 4f;
     public float runSpeed = 8f;
     public int playerNumber = 1;
+    public PlayerInputControls controls;
     public float gravity = -9.81f;
 
     public MarksController marksController;
@@ -20,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 velocity;
     private bool isGrounded = false;
     public Transform groundCheck;
+    private bool canJump = true;
     private float groundDistance = 0.4f;
     public LayerMask groundMask;
     public float jumpHeight = 1f;
@@ -52,6 +55,8 @@ public class PlayerMovement : MonoBehaviour
 
         health = maxHealth;
         marksController.SetMaxHealth(maxHealth);
+
+        controls = new PlayerInputControls();
 
     }
 
@@ -116,8 +121,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void TakeDamage (int damage, string agresorTag, Quaternion rotation)
     {
-        Debug.Log(agresorTag);
-        Debug.Log(rotation);
         if (canMove == true)
         {
             health -= damage;
@@ -131,7 +134,7 @@ public class PlayerMovement : MonoBehaviour
             marksController.SetHealth(health);
 
             if (health <= 0)
-            { respawn(); }
+            { respawn(agresorTag); }
 
             if ( damage > 0 & agresorTag != "scenario" )
             {
@@ -144,16 +147,21 @@ public class PlayerMovement : MonoBehaviour
                 //the damage of the attack and the amount of life remaining 
                 controller.Move(rotation * Vector3.forward * Time.deltaTime * damage * bodyMass * forceFromLife * scenarioForce);
             }
+
+            if (!canJump & isGrounded )
+            {
+                canJump = true;
+            }
         }
 
     }
 
-    void respawn ()
+    void respawn (string agresorTag)
     {
         canMove = false;
         death = true;
         health = maxHealth;
-        marksController.resurrection();
+        marksController.resurrection(agresorTag);
     }
 
     void PlayerControllers ()
@@ -164,20 +172,20 @@ public class PlayerMovement : MonoBehaviour
 
         if (playerNumber == 1)
         {
-            if (Input.GetKey(KeyCode.W))
+            if (Keyboard.current.wKey.isPressed)
             { vertical = vertical + 1f; }
 
-            if (Input.GetKey(KeyCode.A))
+            if (Keyboard.current.aKey.isPressed)
             { horizontal = horizontal - 1f; }
 
-            if (Input.GetKey(KeyCode.S))
+            if (Keyboard.current.sKey.isPressed)
             { vertical = vertical - 1f; }
 
-            if (Input.GetKey(KeyCode.D))
+            if (Keyboard.current.dKey.isPressed)
             { horizontal = horizontal + 1f; }
 
             //Distant attack
-            if (Input.GetKey(KeyCode.K))
+            if (Keyboard.current.kKey.isPressed)
             {
                 // we can only make one attack for each 0.75 seconds
                 if (nextAttack <= Time.time)
@@ -189,12 +197,11 @@ public class PlayerMovement : MonoBehaviour
             }
 
             //melee attack
-            if (Input.GetKey(KeyCode.L))
+            if (Keyboard.current.lKey.isPressed)
             {
                 // we can only make one attack for each 0.5 seconds
                 if (nextAttack <= Time.time)
                 {
-                    Debug.Log("Melee Attack");
                     nextAttack = Time.time + coolDownMelee;
                     
                     Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange);
@@ -211,36 +218,38 @@ public class PlayerMovement : MonoBehaviour
             }
 
             //Jump
-            if (Input.GetKeyDown(KeyCode.I) && isGrounded)
+            if (Keyboard.current.iKey.isPressed && isGrounded && canJump)
             {
+                if (this.gameObject.transform.position.y >= 5)
+                { canJump = false; }
                 velocity.y += Mathf.Sqrt(jumpHeight * -2.0f * gravity);
             }
 
             //run
-            if (Input.GetKey(KeyCode.J))
+            if (Keyboard.current.jKey.isPressed)
             { isRunning = true; }
         }
         else if (playerNumber == 2)
         {
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if (Keyboard.current.leftArrowKey.isPressed)
             { horizontal = horizontal - 1f; }
 
-            if (Input.GetKey(KeyCode.RightArrow))
+            if (Keyboard.current.rightArrowKey.isPressed)
             { horizontal = horizontal + 1f; }
 
-            if (Input.GetKey(KeyCode.DownArrow))
+            if (Keyboard.current.downArrowKey.isPressed)
             { vertical = vertical - 1f; }
 
-            if (Input.GetKey(KeyCode.UpArrow))
+            if (Keyboard.current.upArrowKey.isPressed)
             { vertical = vertical + 1f; }
 
 
             //running
-            if (Input.GetKey(KeyCode.Keypad4))
+            if (Keyboard.current.numpad4Key.isPressed)
             { isRunning = true; }
 
             //melee attack
-            if (Input.GetKey(KeyCode.Keypad6))
+            if (Keyboard.current.numpad6Key.isPressed)
             {
                 // we can only make one attack for each 0.5 seconds
                 if (nextAttack <= Time.time)
@@ -252,7 +261,6 @@ public class PlayerMovement : MonoBehaviour
 
                     foreach (Collider enemy in hitEnemies)
                     {
-                        Debug.Log("you hit " + enemy.name);
                         //checking if it hits the other players but not the current one
                         if (enemy.gameObject.layer == 9 && enemy.gameObject.tag != tagName)
                         {
@@ -263,7 +271,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
             //Distant attack
-            if (Input.GetKey(KeyCode.Keypad5))
+            if (Keyboard.current.numpad5Key.isPressed)
             {
                 // we can only make one attack for each 0.75 seconds
                 if (nextAttack <= Time.time)
@@ -275,8 +283,11 @@ public class PlayerMovement : MonoBehaviour
             }
 
             //Jump
-            if (Input.GetKeyDown(KeyCode.Keypad8) && isGrounded)
+            if (Keyboard.current.numpad8Key.isPressed && isGrounded && canJump)
             {
+                if (this.gameObject.transform.position.y >= 5)
+                { canJump = false; }
+
                 velocity.y += Mathf.Sqrt(jumpHeight * -2.0f * gravity);
             }
         }

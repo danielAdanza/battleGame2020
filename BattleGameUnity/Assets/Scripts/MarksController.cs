@@ -10,11 +10,20 @@ public class MarksController : MonoBehaviour
     public Image healthBarImage;
     public Text totalDeathsText;
     private int totalDeaths = 0;
+    public Text totalKillsText;
+    private int totalKills = 0;
     public GenericMarksController genericMarks;
 
     public void Start ()
     {
-        totalDeaths = PlayerPrefs.GetInt("numberOfLifes");
+        if (PlayerPrefs.GetString("gameMode") == "lifes")
+        {
+            totalDeaths = PlayerPrefs.GetInt("numberOfLifes");
+        } else if (PlayerPrefs.GetString("gameMode") == "time")
+        {
+            totalDeaths = 0;
+        }
+            
         healthBarImage.color = gradient.Evaluate(1f);
         totalDeathsText.text = "" + totalDeaths;
     }
@@ -31,17 +40,29 @@ public class MarksController : MonoBehaviour
         healthBarImage.color = gradient.Evaluate(slider.normalizedValue);
     }
 
-    public void resurrection ()
+    public void resurrection (string agresorTag)
     {
         slider.value = slider.maxValue;
         healthBarImage.color = gradient.Evaluate(1f);
-        totalDeaths--;
+        if (PlayerPrefs.GetString("gameMode") == "lifes")
+        { totalDeaths--; }
+        else if (PlayerPrefs.GetString("gameMode") == "time")
+        { totalDeaths++; }
+        
 
         totalDeathsText.text = "" + totalDeaths;
 
-        if (totalDeaths <= 0)
+        genericMarks.AddKill(agresorTag);
+
+        if (PlayerPrefs.GetString("gameMode") == "lifes" && totalDeaths <= 0)
         {
             genericMarks.WhenGameOver();
         }
+    }
+
+    public void IncreaseKills ()
+    {
+        totalKills++;
+        totalKillsText.text = "" + totalKills;
     }
 }
