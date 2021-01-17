@@ -23,7 +23,14 @@ public class ObjectManager : MonoBehaviour
         {
             pickNextItem();
 
-            Instantiate(items[itemIndex], spawnPositions[spawnIndex].position, Quaternion.identity);
+            //if it is a bomb place it everywhere
+            if (itemIndex == 1)
+            {
+                foreach ( Transform position in spawnPositions)
+                {   Instantiate(items[1], position.position, Quaternion.identity);   }
+            }
+            else
+            {   Instantiate(items[itemIndex], spawnPositions[spawnIndex].position, Quaternion.identity);   }
         }
     }
 

@@ -20,6 +20,9 @@ public class MenuManager : MonoBehaviour
     public Image lifesImage;
     public Image minutesImage;
 
+    //Character stats selection
+    public GameObject characterStats;
+
     public void Start()
     {
         characterImage.color = Color.yellow;
@@ -80,6 +83,8 @@ public class MenuManager : MonoBehaviour
         PlayerPrefs.SetInt("numberOfLifes", lifes);
 
         numberOfLifes.text = "" + PlayerPrefs.GetInt("numberOfLifes");
+
+        this.ChangeGameMode("lifes");
     }
 
     public void ChangeMinutes(int number)
@@ -95,6 +100,8 @@ public class MenuManager : MonoBehaviour
         PlayerPrefs.SetInt("numberOfMinutes", minutes );
 
         numberOfMinutes.text = "" + PlayerPrefs.GetInt("numberOfMinutes");
+
+        this.ChangeGameMode("time");
     }
 
     public void ChangeGameMode (string gamemode)
@@ -121,4 +128,9 @@ public class MenuManager : MonoBehaviour
         Debug.Log( "controlsPlayer" + player );
         Debug.Log( PlayerPrefs.GetInt("controlsPlayer" + player ) );
     } 
+
+    public void OpenAndCloseCharacterStats (bool open)
+    {
+         characterStats.SetActive(open);
+    }
 }

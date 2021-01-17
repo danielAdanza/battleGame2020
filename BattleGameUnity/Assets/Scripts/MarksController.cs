@@ -65,4 +65,14 @@ public class MarksController : MonoBehaviour
         totalKills++;
         totalKillsText.text = "" + totalKills;
     }
+
+    public int GetTotalDeaths ()
+    {
+        return totalDeaths;
+    }
+
+    public int GetTotalKills ()
+    {
+        return totalKills;
+    }
 }

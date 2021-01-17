@@ -7,7 +7,12 @@ using UnityEngine.SceneManagement;
 public class GenericMarksController : MonoBehaviour
 {
     public GameObject pauseMenuUI;
-    public Text pauseMenuText;
+    public Text p1LifesText;
+    public Text p1KillsText;
+    public Text p1ScoreText;
+    public Text p2LifesText;
+    public Text p2KillsText;
+    public Text p2ScoreText;
 
     public MarksController marksP1;
     public MarksController marksP2;
@@ -32,7 +37,20 @@ public class GenericMarksController : MonoBehaviour
     public void WhenGameOver ()
     {
         pauseMenuUI.SetActive(true);
-        pauseMenuText.text = "GAME OVER \n\n" + this.gameObject.name + " looses";
+        p1LifesText.text = "" + marksP1.GetTotalDeaths();
+        p1KillsText.text = "" + marksP1.GetTotalKills();
+        p2LifesText.text = "" + marksP2.GetTotalDeaths();
+        p2KillsText.text = "" + marksP2.GetTotalKills();
+
+        if (PlayerPrefs.GetString("gameMode") == "lifes")  {
+            p1ScoreText.text = "" + marksP1.GetTotalDeaths();
+            p2ScoreText.text = "" + marksP2.GetTotalDeaths();
+        }
+        else  {
+            p1ScoreText.text = "" + ((marksP1.GetTotalKills() * 2) - marksP1.GetTotalDeaths());
+            p2ScoreText.text = "" + ((marksP2.GetTotalKills() * 2) - marksP2.GetTotalDeaths());
+        }
+            
     }
 
     public void WhenMainMenuIsClicked ()

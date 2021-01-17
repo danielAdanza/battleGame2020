@@ -222,6 +222,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (this.gameObject.transform.position.y >= 5)
                 { canJump = false; }
+                Debug.Log(this.transform.position);
                 velocity.y += Mathf.Sqrt(jumpHeight * -2.0f * gravity);
             }
 

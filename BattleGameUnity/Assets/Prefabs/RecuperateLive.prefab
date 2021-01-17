@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: -20
-  lifeTime: 10
+  lifeTime: 8
 --- !u!135 &2842598245818581851
 SphereCollider:
   m_ObjectHideFlags: 0
