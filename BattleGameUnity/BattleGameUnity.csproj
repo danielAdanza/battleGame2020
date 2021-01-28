@@ -244,6 +244,24 @@
     <Reference Include="clipper_library">
       <HintPath>C:/Users/Lenovo/Desktop/apuntes/videojuego/2020/BattleGame/BattleGameUnity/Library/PackageCache/com.unity.cinemachine@2.7.1/Runtime/ThirdParty/clipper_library.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+      <HintPath>C:/Users/Lenovo/Desktop/apuntes/videojuego/2020/BattleGame/BattleGameUnity/Library/PackageCache/com.unity.burst@1.3.4/Unity.Burst.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Abstractions.TestingHelpers">
+      <HintPath>C:/Users/Lenovo/Desktop/apuntes/videojuego/2020/BattleGame/BattleGameUnity/Library/PackageCache/com.unity.ml-agents@1.0.6/Plugins/System.IO.Abstractions.TestingHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf">
+      <HintPath>C:/Users/Lenovo/Desktop/apuntes/videojuego/2020/BattleGame/BattleGameUnity/Library/PackageCache/com.unity.barracuda@1.0.4/Barracuda/Runtime/Plugins/ProtoBuffer/Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Abstractions">
+      <HintPath>C:/Users/Lenovo/Desktop/apuntes/videojuego/2020/BattleGame/BattleGameUnity/Library/PackageCache/com.unity.ml-agents@1.0.6/Plugins/System.IO.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Interactive.Async">
+      <HintPath>C:/Users/Lenovo/Desktop/apuntes/videojuego/2020/BattleGame/BattleGameUnity/Library/PackageCache/com.unity.ml-agents@1.0.6/Plugins/ProtoBuffer/System.Interactive.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Core">
+      <HintPath>C:/Users/Lenovo/Desktop/apuntes/videojuego/2020/BattleGame/BattleGameUnity/Library/PackageCache/com.unity.ml-agents@1.0.6/Plugins/ProtoBuffer/Grpc.Core.dll</HintPath>
+    </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.1.9f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
     </Reference>
@@ -627,8 +645,57 @@
       <Project>{D6E266C6-3D1F-28C8-9FEB-2A01E44DBF77}</Project>
       <Name>Unity.Analytics.DataPrivacy</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Barracuda.MacBLAS.csproj">
+      <Project>{2B5EBA4C-6F49-0CD7-B2E9-17011B7A77DE}</Project>
+      <Name>Unity.Barracuda.MacBLAS</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Burst.csproj">
+      <Project>{0C74765B-F4CA-7B0F-F53E-9587C807DB59}</Project>
+      <Name>Unity.Burst</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Barracuda.Editor.csproj">
+      <Project>{380BDDF0-8A5E-D44A-9906-A8366A78F5F7}</Project>
+      <Name>Unity.Barracuda.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Burst.Editor.csproj">
+      <Project>{9C1497B8-C3E3-622E-AE76-6C9406BBD464}</Project>
+      <Name>Unity.Burst.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Barracuda.csproj">
+      <Project>{19E920D6-049F-9E80-3D12-28DFA00E1EBF}</Project>
+      <Name>Unity.Barracuda</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Barracuda.iOSBLAS.csproj">
+      <Project>{4CA5F358-0823-13A6-3AC2-C8762B1F91C6}</Project>
+      <Name>Unity.Barracuda.iOSBLAS</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ML-Agents.CommunicatorObjects.csproj">
+      <Project>{0414277F-87C4-2C43-6C82-6BE303E3ECC6}</Project>
+      <Name>Unity.ML-Agents.CommunicatorObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Barracuda.BurstBLAS.csproj">
+      <Project>{EADDBA5C-9D8F-36FC-4CF7-3F00B455CEFA}</Project>
+      <Name>Unity.Barracuda.BurstBLAS</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.csproj">
+      <Project>{CF96849C-7EC5-561A-2E6B-E507ADE81955}</Project>
+      <Name>Unity.Mathematics</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.Editor.csproj">
+      <Project>{6AF95F4B-B8F1-38E0-2772-4BB952A98123}</Project>
+      <Name>Unity.Mathematics.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ML-Agents.Editor.csproj">
+      <Project>{F2BA6F82-B7B1-89DD-F5B6-9DBC8354D4BC}</Project>
+      <Name>Unity.ML-Agents.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ML-Agents.csproj">
+      <Project>{F20DAC98-2C07-4D2A-A668-D63F0299122E}</Project>
+      <Name>Unity.ML-Agents</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AIscripts\AIMovement.cs" />
     <Compile Include="Assets\Scripts\DistantAttacks.cs" />
     <Compile Include="Assets\Scripts\GenericMarksController.cs" />
     <Compile Include="Assets\Scripts\liveAndDamageObject.cs" />
@@ -643,6 +710,31 @@
     <None Include="Packages\com.unity.analytics\DataPrivacy\Unity.Analytics.DataPrivacy.asmdef" />
     <None Include="Packages\com.unity.analytics\Tests\Editor\Unity.Analytics.StandardEvents\Unity.Analytics.StandardEvents.EditorTests.asmdef" />
     <None Include="Packages\com.unity.analytics\Tests\Runtime\DataPrivacy\Unity.Analytics.DataPrivacy.Tests.asmdef" />
+    <None Include="Packages\com.unity.barracuda\Barracuda\Editor\Unity.Barracuda.Editor.asmdef" />
+    <None Include="Packages\com.unity.barracuda\Barracuda\Runtime\Core\Resources\Activation.compute" />
+    <None Include="Packages\com.unity.barracuda\Barracuda\Runtime\Core\Resources\BarracudaReferenceImpl.compute" />
+    <None Include="Packages\com.unity.barracuda\Barracuda\Runtime\Core\Resources\Broadcast.compute" />
+    <None Include="Packages\com.unity.barracuda\Barracuda\Runtime\Core\Resources\Conv.compute" />
+    <None Include="Packages\com.unity.barracuda\Barracuda\Runtime\Core\Resources\DebugUtils.cginc" />
+    <None Include="Packages\com.unity.barracuda\Barracuda\Runtime\Core\Resources\Dense.compute" />
+    <None Include="Packages\com.unity.barracuda\Barracuda\Runtime\Core\Resources\DenseFP16.compute" />
+    <None Include="Packages\com.unity.barracuda\Barracuda\Runtime\Core\Resources\Generic.compute" />
+    <None Include="Packages\com.unity.barracuda\Barracuda\Runtime\Core\Resources\Pad.compute" />
+    <None Include="Packages\com.unity.barracuda\Barracuda\Runtime\Core\Resources\Pool.compute" />
+    <None Include="Packages\com.unity.barracuda\Barracuda\Runtime\Core\Resources\Random.cginc" />
+    <None Include="Packages\com.unity.barracuda\Barracuda\Runtime\Core\Resources\Tensor.cginc" />
+    <None Include="Packages\com.unity.barracuda\Barracuda\Runtime\Core\Unity.Barracuda.asmdef" />
+    <None Include="Packages\com.unity.barracuda\Barracuda\Runtime\Plugins\Burst\Unity.Barracuda.BurstBLAS.asmdef" />
+    <None Include="Packages\com.unity.barracuda\Barracuda\Runtime\Plugins\OSX\Unity.Barracuda.MacBLAS.asmdef" />
+    <None Include="Packages\com.unity.barracuda\Barracuda\Runtime\Plugins\iOS\Unity.Barracuda.iOSBLAS.asmdef" />
+    <None Include="Packages\com.unity.barracuda\Barracuda\Tests\Editor\Unity.Barracuda.Editor.Tests.asmdef" />
+    <None Include="Packages\com.unity.barracuda\Tools\requirements.txt" />
+    <None Include="Packages\com.unity.burst\Editor\Unity.Burst.Editor.asmdef" />
+    <None Include="Packages\com.unity.burst\Runtime\Unity.Burst.asmdef" />
+    <None Include="Packages\com.unity.burst\Tests\Editor\SeparateAssembly\SeparateAssembly.asmdef" />
+    <None Include="Packages\com.unity.burst\Tests\Editor\Unity.Burst.Editor.Tests.asmdef" />
+    <None Include="Packages\com.unity.burst\Tests\Runtime\Unity.Burst.Tests.asmdef" />
+    <None Include="Packages\com.unity.burst\Unity.Burst.Unsafe.xml" />
     <None Include="Packages\com.unity.cinemachine\Editor\EditorResources\CMWaveform.compute" />
     <None Include="Packages\com.unity.cinemachine\Editor\EditorResources\CMWaveform.shader" />
     <None Include="Packages\com.unity.cinemachine\Editor\EditorResources\StdLib.hlsl" />
@@ -659,6 +751,16 @@
     <None Include="Packages\com.unity.inputsystem\InputSystem\Unity.InputSystem.asmdef" />
     <None Include="Packages\com.unity.inputsystem\Tests\IntegrationTests\Unity.InputSystem.IntegrationTests.asmdef" />
     <None Include="Packages\com.unity.inputsystem\Tests\TestFixture\Unity.InputSystem.TestFramework.asmdef" />
+    <None Include="Packages\com.unity.mathematics\Tests\Unity.Mathematics.Tests.asmdef" />
+    <None Include="Packages\com.unity.mathematics\Unity.Mathematics.Editor\Unity.Mathematics.Editor.asmdef" />
+    <None Include="Packages\com.unity.mathematics\Unity.Mathematics\Unity.Mathematics.asmdef" />
+    <None Include="Packages\com.unity.ml-agents\Editor\Unity.ML-Agents.Editor.asmdef" />
+    <None Include="Packages\com.unity.ml-agents\Plugins\ProtoBuffer\link.xml" />
+    <None Include="Packages\com.unity.ml-agents\Runtime\Grpc\Unity.ML-Agents.CommunicatorObjects.asmdef" />
+    <None Include="Packages\com.unity.ml-agents\Runtime\Unity.ML-Agents.asmdef" />
+    <None Include="Packages\com.unity.ml-agents\Tests\Editor\PublicAPI\Unity.ML-Agents.Editor.Tests.PublicAPI.asmdef" />
+    <None Include="Packages\com.unity.ml-agents\Tests\Editor\Unity.ML-Agents.Editor.Tests.asmdef" />
+    <None Include="Packages\com.unity.ml-agents\Tests\Runtime\Unity.ML-Agents.Runtime.Tests.asmdef" />
     <None Include="Packages\com.unity.purchasing\Tests\Editor\Unity.IAP.purchasing.EditorTests.asmdef" />
     <None Include="Packages\com.unity.purchasing\Tests\Runtime\Unity.IAP.purchasing.RunTimeTests.asmdef" />
     <None Include="Packages\com.unity.textmeshpro\Editor Resources\Shaders\TMP_Properties.cginc" />
