@@ -210,9 +210,9 @@ public class PlayerMovement : MonoBehaviour
                     {
                         //checking if it hits the other players but not the current one
                         if (enemy.gameObject.layer == 9 && enemy.gameObject.tag != tagName)
-                        {
-                            enemy.gameObject.GetComponent<PlayerMovement>().TakeDamage(attack, this.tagName, this.gameObject.transform.rotation);
-                        }
+                        {   enemy.gameObject.GetComponent<PlayerMovement>().TakeDamage(attack, this.tagName, this.gameObject.transform.rotation); }
+                        else if (enemy.gameObject.layer == 11)
+                        {   enemy.gameObject.GetComponent<AIMovement>().TakeDamage(attack, this.tagName, this.gameObject.transform.rotation); }
                     }
                 }
             }

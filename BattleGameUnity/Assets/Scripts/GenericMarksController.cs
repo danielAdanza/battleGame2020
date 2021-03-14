@@ -13,9 +13,13 @@ public class GenericMarksController : MonoBehaviour
     public Text p2LifesText;
     public Text p2KillsText;
     public Text p2ScoreText;
+    public Text p3LifesText;
+    public Text p3KillsText;
+    public Text p3ScoreText;
 
     public MarksController marksP1;
     public MarksController marksP2;
+    public MarksController marksP3;
 
     private float timer = 0.0f;
     public Text timerText;

@@ -1,0 +1,671 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Piernas_Botboreta
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: adorno
+    m_Weight: 0
+  - m_Path: adorno.001
+    m_Weight: 0
+  - m_Path: ALAS_inf
+    m_Weight: 0
+  - m_Path: ALAS_inf.001
+    m_Weight: 0
+  - m_Path: ALAS_sup
+    m_Weight: 0
+  - m_Path: ALAS_sup.001
+    m_Weight: 0
+  - m_Path: antebrazo
+    m_Weight: 0
+  - m_Path: antebrazo.002
+    m_Weight: 0
+  - m_Path: antena
+    m_Weight: 0
+  - m_Path: antena.001
+    m_Weight: 0
+  - m_Path: bisagra
+    m_Weight: 0
+  - m_Path: bisagra.001
+    m_Weight: 0
+  - m_Path: BOLA_TORSO
+    m_Weight: 0
+  - m_Path: botboreta
+    m_Weight: 0
+  - m_Path: botboreta/mano_IK.L
+    m_Weight: 1
+  - m_Path: botboreta/mano_IK.L/palo_Lanza.L
+    m_Weight: 1
+  - m_Path: botboreta/mano_IK.L/palo_Lanza.L/punta_Lanza.L
+    m_Weight: 1
+  - m_Path: botboreta/mano_IK.L/palo_Lanza.L/punta_Lanza.L/punta_Lanza.L_end
+    m_Weight: 1
+  - m_Path: botboreta/mano_IK.R
+    m_Weight: 1
+  - m_Path: botboreta/mano_IK.R/palo_Lanza.R
+    m_Weight: 1
+  - m_Path: botboreta/mano_IK.R/palo_Lanza.R/punta_Lanza.R
+    m_Weight: 1
+  - m_Path: botboreta/mano_IK.R/palo_Lanza.R/punta_Lanza.R/punta_Lanza.R_end
+    m_Weight: 1
+  - m_Path: botboreta/pie_ik.L
+    m_Weight: 1
+  - m_Path: botboreta/pie_ik.L/pie_ik.L_end
+    m_Weight: 1
+  - m_Path: botboreta/pie_ik.R
+    m_Weight: 1
+  - m_Path: botboreta/pie_ik.R/pie_ik.R_end
+    m_Weight: 1
+  - m_Path: botboreta/Pole_brazo.L
+    m_Weight: 1
+  - m_Path: botboreta/Pole_brazo.L/Pole_brazo.L_end
+    m_Weight: 1
+  - m_Path: botboreta/Pole_brazo.R
+    m_Weight: 1
+  - m_Path: botboreta/Pole_brazo.R/Pole_brazo.R_end
+    m_Weight: 1
+  - m_Path: botboreta/ROdillaIK.L
+    m_Weight: 1
+  - m_Path: botboreta/ROdillaIK.L/ROdillaIK.L_end
+    m_Weight: 1
+  - m_Path: botboreta/ROdillaIK.R
+    m_Weight: 1
+  - m_Path: botboreta/ROdillaIK.R/ROdillaIK.R_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/Falada
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/Falada/Falada_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/Falada.001
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/Falada.001/Falada.001_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/Falada.001.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/Falada.001.L/Falada.001.L_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/Falada.001.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/Falada.001.R/Falada.001.R_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/Falada.002.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/Falada.002.L/Falada.002.L_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/Falada.002.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/Falada.002.R/Falada.002.R_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/JAMON.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/JAMON.L/pierna.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/JAMON.L/pierna.L/pierna.001.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/JAMON.L/pierna.L/pierna.001.L/tobillo.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/JAMON.L/pierna.L/pierna.001.L/tobillo.L/pie.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/JAMON.L/pierna.L/pierna.001.L/tobillo.L/pie.L/puntaPie.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/JAMON.L/pierna.L/pierna.001.L/tobillo.L/pie.L/puntaPie.L/puntaPie.L_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/JAMON.L/pierna.L/rodilla.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/JAMON.L/pierna.L/rodilla.L/rodilla.L_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/JAMON.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/JAMON.R/pierna.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/JAMON.R/pierna.R/pierna.001.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/JAMON.R/pierna.R/pierna.001.R/tobillo.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/JAMON.R/pierna.R/pierna.001.R/tobillo.R/pie.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/JAMON.R/pierna.R/pierna.001.R/tobillo.R/pie.R/puntaPie.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/JAMON.R/pierna.R/pierna.001.R/tobillo.R/pie.R/puntaPie.R/puntaPie.R_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/JAMON.R/pierna.R/rodilla.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/JAMON.R/pierna.R/rodilla.R/rodilla.R_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L/Brazo.001.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L/Brazo.001.L/Brazo.002.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L/Brazo.001.L/Brazo.002.L/Brazo.003.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L/Brazo.001.L/Brazo.002.L/Brazo.003.L/mano.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L/Brazo.001.L/Brazo.002.L/Brazo.003.L/mano.L/dedo_anular.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L/Brazo.001.L/Brazo.002.L/Brazo.003.L/mano.L/dedo_anular.L/dedo_anular.001.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L/Brazo.001.L/Brazo.002.L/Brazo.003.L/mano.L/dedo_anular.L/dedo_anular.001.L/dedo_anular.002.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L/Brazo.001.L/Brazo.002.L/Brazo.003.L/mano.L/dedo_anular.L/dedo_anular.001.L/dedo_anular.002.L/dedo_anular.003.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L/Brazo.001.L/Brazo.002.L/Brazo.003.L/mano.L/dedo_anular.L/dedo_anular.001.L/dedo_anular.002.L/dedo_anular.003.L/dedo_anular.003.L_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L/Brazo.001.L/Brazo.002.L/Brazo.003.L/mano.L/dedo_corazon.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L/Brazo.001.L/Brazo.002.L/Brazo.003.L/mano.L/dedo_corazon.L/dedo_corazon.001.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L/Brazo.001.L/Brazo.002.L/Brazo.003.L/mano.L/dedo_corazon.L/dedo_corazon.001.L/dedo_corazon.002.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L/Brazo.001.L/Brazo.002.L/Brazo.003.L/mano.L/dedo_corazon.L/dedo_corazon.001.L/dedo_corazon.002.L/dedo_corazon.003.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L/Brazo.001.L/Brazo.002.L/Brazo.003.L/mano.L/dedo_corazon.L/dedo_corazon.001.L/dedo_corazon.002.L/dedo_corazon.003.L/dedo_corazon.003.L_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L/Brazo.001.L/Brazo.002.L/Brazo.003.L/mano.L/dedo_palma.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L/Brazo.001.L/Brazo.002.L/Brazo.003.L/mano.L/dedo_palma.L/dedo_menique.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L/Brazo.001.L/Brazo.002.L/Brazo.003.L/mano.L/dedo_palma.L/dedo_menique.L/dedo_menique.001.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L/Brazo.001.L/Brazo.002.L/Brazo.003.L/mano.L/dedo_palma.L/dedo_menique.L/dedo_menique.001.L/dedo_menique.002.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L/Brazo.001.L/Brazo.002.L/Brazo.003.L/mano.L/dedo_palma.L/dedo_menique.L/dedo_menique.001.L/dedo_menique.002.L/dedo_menique.002.L_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L/Brazo.001.L/Brazo.002.L/Brazo.003.L/mano.L/Indice.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L/Brazo.001.L/Brazo.002.L/Brazo.003.L/mano.L/Indice.L/dedo_indice.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L/Brazo.001.L/Brazo.002.L/Brazo.003.L/mano.L/Indice.L/dedo_indice.L/dedo_indice.001.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L/Brazo.001.L/Brazo.002.L/Brazo.003.L/mano.L/Indice.L/dedo_indice.L/dedo_indice.001.L/dedo_indice.002.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L/Brazo.001.L/Brazo.002.L/Brazo.003.L/mano.L/Indice.L/dedo_indice.L/dedo_indice.001.L/dedo_indice.002.L/dedo_indice.002.L_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L/Brazo.001.L/Brazo.002.L/Brazo.003.L/mano.L/pulgar.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L/Brazo.001.L/Brazo.002.L/Brazo.003.L/mano.L/pulgar.L/pulgar.001.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L/Brazo.001.L/Brazo.002.L/Brazo.003.L/mano.L/pulgar.L/pulgar.001.L/pulgar.002.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.L/Brazo.001.L/Brazo.002.L/Brazo.003.L/mano.L/pulgar.L/pulgar.001.L/pulgar.002.L/pulgar.002.L_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R/Brazo.001.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R/Brazo.001.R/Brazo.002.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R/Brazo.001.R/Brazo.002.R/Brazo.003.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R/Brazo.001.R/Brazo.002.R/Brazo.003.R/mano.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R/Brazo.001.R/Brazo.002.R/Brazo.003.R/mano.R/dedo_anular.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R/Brazo.001.R/Brazo.002.R/Brazo.003.R/mano.R/dedo_anular.R/dedo_anular.001.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R/Brazo.001.R/Brazo.002.R/Brazo.003.R/mano.R/dedo_anular.R/dedo_anular.001.R/dedo_anular.002.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R/Brazo.001.R/Brazo.002.R/Brazo.003.R/mano.R/dedo_anular.R/dedo_anular.001.R/dedo_anular.002.R/dedo_anular.003.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R/Brazo.001.R/Brazo.002.R/Brazo.003.R/mano.R/dedo_anular.R/dedo_anular.001.R/dedo_anular.002.R/dedo_anular.003.R/dedo_anular.003.R_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R/Brazo.001.R/Brazo.002.R/Brazo.003.R/mano.R/dedo_corazon.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R/Brazo.001.R/Brazo.002.R/Brazo.003.R/mano.R/dedo_corazon.R/dedo_corazon.001.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R/Brazo.001.R/Brazo.002.R/Brazo.003.R/mano.R/dedo_corazon.R/dedo_corazon.001.R/dedo_corazon.002.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R/Brazo.001.R/Brazo.002.R/Brazo.003.R/mano.R/dedo_corazon.R/dedo_corazon.001.R/dedo_corazon.002.R/dedo_corazon.003.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R/Brazo.001.R/Brazo.002.R/Brazo.003.R/mano.R/dedo_corazon.R/dedo_corazon.001.R/dedo_corazon.002.R/dedo_corazon.003.R/dedo_corazon.003.R_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R/Brazo.001.R/Brazo.002.R/Brazo.003.R/mano.R/dedo_palma.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R/Brazo.001.R/Brazo.002.R/Brazo.003.R/mano.R/dedo_palma.R/dedo_menique.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R/Brazo.001.R/Brazo.002.R/Brazo.003.R/mano.R/dedo_palma.R/dedo_menique.R/dedo_menique.001.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R/Brazo.001.R/Brazo.002.R/Brazo.003.R/mano.R/dedo_palma.R/dedo_menique.R/dedo_menique.001.R/dedo_menique.002.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R/Brazo.001.R/Brazo.002.R/Brazo.003.R/mano.R/dedo_palma.R/dedo_menique.R/dedo_menique.001.R/dedo_menique.002.R/dedo_menique.002.R_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R/Brazo.001.R/Brazo.002.R/Brazo.003.R/mano.R/Indice.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R/Brazo.001.R/Brazo.002.R/Brazo.003.R/mano.R/Indice.R/dedo_indice.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R/Brazo.001.R/Brazo.002.R/Brazo.003.R/mano.R/Indice.R/dedo_indice.R/dedo_indice.001.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R/Brazo.001.R/Brazo.002.R/Brazo.003.R/mano.R/Indice.R/dedo_indice.R/dedo_indice.001.R/dedo_indice.002.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R/Brazo.001.R/Brazo.002.R/Brazo.003.R/mano.R/Indice.R/dedo_indice.R/dedo_indice.001.R/dedo_indice.002.R/dedo_indice.002.R_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R/Brazo.001.R/Brazo.002.R/Brazo.003.R/mano.R/pulgar.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R/Brazo.001.R/Brazo.002.R/Brazo.003.R/mano.R/pulgar.R/pulgar.001.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R/Brazo.001.R/Brazo.002.R/Brazo.003.R/mano.R/pulgar.R/pulgar.001.R/pulgar.002.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/Brazo.R/Brazo.001.R/Brazo.002.R/Brazo.003.R/mano.R/pulgar.R/pulgar.001.R/pulgar.002.R/pulgar.002.R_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/carcaje 1
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/carcaje 1/ALA_inf.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/carcaje 1/ALA_inf.L/ALA_inf.L_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/carcaje 1/ALA_inf.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/carcaje 1/ALA_inf.R/ALA_inf.R_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/carcaje 1/ALA_sup.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/carcaje 1/ALA_sup.L/ALA_sup.L_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/carcaje 1/ALA_sup.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/carcaje 1/ALA_sup.R/ALA_sup.R_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/carcaje 1/lanza_espalda.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/carcaje 1/lanza_espalda.L/lanza_espalda.L_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/carcaje 1/lanza_espalda.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/carcaje 1/lanza_espalda.R/lanza_espalda.R_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena.L/antena.001.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena.L/antena.001.L/antena.002.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena.L/antena.001.L/antena.002.L/antena.003.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena.L/antena.001.L/antena.002.L/antena.003.L/antena.004.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena.L/antena.001.L/antena.002.L/antena.003.L/antena.004.L/antena.005.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena.L/antena.001.L/antena.002.L/antena.003.L/antena.004.L/antena.005.L/antena.006.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena.L/antena.001.L/antena.002.L/antena.003.L/antena.004.L/antena.005.L/antena.006.L/antena.007.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena.L/antena.001.L/antena.002.L/antena.003.L/antena.004.L/antena.005.L/antena.006.L/antena.007.L/antena.008.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena.L/antena.001.L/antena.002.L/antena.003.L/antena.004.L/antena.005.L/antena.006.L/antena.007.L/antena.008.L/antena.009.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena.L/antena.001.L/antena.002.L/antena.003.L/antena.004.L/antena.005.L/antena.006.L/antena.007.L/antena.008.L/antena.009.L/antena.010.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena.L/antena.001.L/antena.002.L/antena.003.L/antena.004.L/antena.005.L/antena.006.L/antena.007.L/antena.008.L/antena.009.L/antena.010.L/antena.011.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena.L/antena.001.L/antena.002.L/antena.003.L/antena.004.L/antena.005.L/antena.006.L/antena.007.L/antena.008.L/antena.009.L/antena.010.L/antena.011.L/antena.011.L_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena.R/antena.001.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena.R/antena.001.R/antena.002.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena.R/antena.001.R/antena.002.R/antena.003.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena.R/antena.001.R/antena.002.R/antena.003.R/antena.004.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena.R/antena.001.R/antena.002.R/antena.003.R/antena.004.R/antena.005.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena.R/antena.001.R/antena.002.R/antena.003.R/antena.004.R/antena.005.R/antena.006.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena.R/antena.001.R/antena.002.R/antena.003.R/antena.004.R/antena.005.R/antena.006.R/antena.007.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena.R/antena.001.R/antena.002.R/antena.003.R/antena.004.R/antena.005.R/antena.006.R/antena.007.R/antena.008.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena.R/antena.001.R/antena.002.R/antena.003.R/antena.004.R/antena.005.R/antena.006.R/antena.007.R/antena.008.R/antena.009.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena.R/antena.001.R/antena.002.R/antena.003.R/antena.004.R/antena.005.R/antena.006.R/antena.007.R/antena.008.R/antena.009.R/antena.010.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena.R/antena.001.R/antena.002.R/antena.003.R/antena.004.R/antena.005.R/antena.006.R/antena.007.R/antena.008.R/antena.009.R/antena.010.R/antena.011.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena.R/antena.001.R/antena.002.R/antena.003.R/antena.004.R/antena.005.R/antena.006.R/antena.007.R/antena.008.R/antena.009.R/antena.010.R/antena.011.R/antena.011.R_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena_IK.001.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena_IK.001.L/antena_IK.001.L_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena_IK.001.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena_IK.001.R/antena_IK.001.R_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena_IK.002.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena_IK.002.L/antena_IK.002.L_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena_IK.002.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena_IK.002.R/antena_IK.002.R_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena_IK.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena_IK.L/antena_IK.L_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena_IK.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/antena_IK.R/antena_IK.R_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/Lazo_inf.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/Lazo_inf.L/Lazo_inf.L_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/Lazo_inf.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/Lazo_inf.R/Lazo_inf.R_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/Lazo_sup.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/Lazo_sup.L/Lazo_sup.L_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/Lazo_sup.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/Lazo_sup.R/Lazo_sup.R_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/ojo.L
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/ojo.L/ojo.L_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/ojo.R
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/ojo.R/ojo.R_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/Trompa_spline_IK
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/Trompa_spline_IK/Trompa_spline_IK_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/Trompa_spline_IK.001
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/Trompa_spline_IK.001/Trompa_spline_IK.001_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/Trompa_spline_IK.002
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/Trompa_spline_IK.002/Trompa_spline_IK.002_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/Trompa_spline_IK.003
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/Trompa_spline_IK.003/Trompa_spline_IK.003_end
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/Trompa_spline_IK.004
+    m_Weight: 1
+  - m_Path: botboreta/ROOT_gen/ROOT_gen.001/torso 1/cuello/cabeza/Trompa_spline_IK.004/Trompa_spline_IK.004_end
+    m_Weight: 1
+  - m_Path: botboreta/Trompa
+    m_Weight: 1
+  - m_Path: botboreta/Trompa/Trompa.001
+    m_Weight: 1
+  - m_Path: botboreta/Trompa/Trompa.001/Trompa.002
+    m_Weight: 1
+  - m_Path: botboreta/Trompa/Trompa.001/Trompa.002/Trompa.003
+    m_Weight: 1
+  - m_Path: botboreta/Trompa/Trompa.001/Trompa.002/Trompa.003/Trompa.004
+    m_Weight: 1
+  - m_Path: botboreta/Trompa/Trompa.001/Trompa.002/Trompa.003/Trompa.004/Trompa.005
+    m_Weight: 1
+  - m_Path: botboreta/Trompa/Trompa.001/Trompa.002/Trompa.003/Trompa.004/Trompa.005/Trompa.006
+    m_Weight: 1
+  - m_Path: botboreta/Trompa/Trompa.001/Trompa.002/Trompa.003/Trompa.004/Trompa.005/Trompa.006/Trompa.007
+    m_Weight: 1
+  - m_Path: botboreta/Trompa/Trompa.001/Trompa.002/Trompa.003/Trompa.004/Trompa.005/Trompa.006/Trompa.007/Trompa.008
+    m_Weight: 1
+  - m_Path: botboreta/Trompa/Trompa.001/Trompa.002/Trompa.003/Trompa.004/Trompa.005/Trompa.006/Trompa.007/Trompa.008/Trompa.008_end
+    m_Weight: 1
+  - m_Path: braga
+    m_Weight: 1
+  - m_Path: brazo
+    m_Weight: 0
+  - m_Path: brazo.002
+    m_Weight: 0
+  - m_Path: cadera
+    m_Weight: 1
+  - m_Path: cara
+    m_Weight: 1
+  - m_Path: carcaje
+    m_Weight: 1
+  - m_Path: CUELLO
+    m_Weight: 1
+  - m_Path: cuello_union
+    m_Weight: 1
+  - m_Path: deltoides
+    m_Weight: 1
+  - m_Path: deltoides.002
+    m_Weight: 1
+  - m_Path: falange_anular_ra
+    m_Weight: 1
+  - m_Path: falange_anular_ra.001
+    m_Weight: 1
+  - m_Path: falange_anular_ra.002
+    m_Weight: 1
+  - m_Path: falange_anular_ra.003
+    m_Weight: 1
+  - m_Path: falange_anular_ra.004
+    m_Weight: 1
+  - m_Path: falange_anular_ra.005
+    m_Weight: 1
+  - m_Path: falange_corazon_ra
+    m_Weight: 1
+  - m_Path: falange_corazon_ra.001
+    m_Weight: 1
+  - m_Path: falange_corazon_ra.002
+    m_Weight: 1
+  - m_Path: falange_corazon_ra.006
+    m_Weight: 1
+  - m_Path: falange_corazon_ra.007
+    m_Weight: 1
+  - m_Path: falange_corazon_ra.008
+    m_Weight: 1
+  - m_Path: falange_indice_ra
+    m_Weight: 1
+  - m_Path: falange_indice_ra.001
+    m_Weight: 1
+  - m_Path: falange_indice_ra.002
+    m_Weight: 1
+  - m_Path: falange_indice_ra.003
+    m_Weight: 1
+  - m_Path: falange_indice_ra.004
+    m_Weight: 1
+  - m_Path: falange_indice_ra.005
+    m_Weight: 1
+  - m_Path: falange_menique_ra
+    m_Weight: 1
+  - m_Path: falange_menique_ra.001
+    m_Weight: 1
+  - m_Path: falange_menique_ra.002
+    m_Weight: 1
+  - m_Path: falange_menique_ra.003
+    m_Weight: 1
+  - m_Path: falange_menique_ra.004
+    m_Weight: 1
+  - m_Path: falange_menique_ra.005
+    m_Weight: 1
+  - m_Path: falange_pulgar_ra
+    m_Weight: 1
+  - m_Path: falange_pulgar_ra.001
+    m_Weight: 1
+  - m_Path: falange_pulgar_ra.002
+    m_Weight: 1
+  - m_Path: falange_pulgar_ra.003
+    m_Weight: 1
+  - m_Path: FALDA.001
+    m_Weight: 1
+  - m_Path: FALDA.002
+    m_Weight: 1
+  - m_Path: FALDA.003
+    m_Weight: 1
+  - m_Path: FALDA.004
+    m_Weight: 1
+  - m_Path: FALDA.005
+    m_Weight: 1
+  - m_Path: FALDA.006
+    m_Weight: 1
+  - m_Path: gema_Adorno
+    m_Weight: 1
+  - m_Path: hombro
+    m_Weight: 1
+  - m_Path: hombro.002
+    m_Weight: 1
+  - m_Path: jamon
+    m_Weight: 1
+  - m_Path: jamon.001
+    m_Weight: 1
+  - m_Path: lazobase
+    m_Weight: 1
+  - m_Path: lazobase/lazo_inf
+    m_Weight: 1
+  - m_Path: LENGUETA
+    m_Weight: 1
+  - m_Path: LENGUETA.001
+    m_Weight: 1
+  - m_Path: muneca
+    m_Weight: 1
+  - m_Path: muneca.002
+    m_Weight: 1
+  - m_Path: palma
+    m_Weight: 1
+  - m_Path: palma.002
+    m_Weight: 1
+  - m_Path: Palo_lanza
+    m_Weight: 1
+  - m_Path: Palo_lanza.002
+    m_Weight: 1
+  - m_Path: Palo_lanza.003
+    m_Weight: 1
+  - m_Path: Palo_lanza.004
+    m_Weight: 1
+  - m_Path: pelo
+    m_Weight: 1
+  - m_Path: pierna
+    m_Weight: 1
+  - m_Path: pierna.001
+    m_Weight: 1
+  - m_Path: PUNTA ZAPATO
+    m_Weight: 1
+  - m_Path: PUNTA ZAPATO.001
+    m_Weight: 1
+  - m_Path: PUNTA_LANZA
+    m_Weight: 1
+  - m_Path: PUNTA_LANZA.002
+    m_Weight: 1
+  - m_Path: PUNTA_LANZA.003
+    m_Weight: 1
+  - m_Path: PUNTA_LANZA.004
+    m_Weight: 1
+  - m_Path: rodillera
+    m_Weight: 1
+  - m_Path: rodillera.001
+    m_Weight: 1
+  - m_Path: sobaco
+    m_Weight: 1
+  - m_Path: sobaco.002
+    m_Weight: 1
+  - m_Path: torso
+    m_Weight: 1
+  - m_Path: trompa
+    m_Weight: 1
+  - m_Path: union_antebrazo
+    m_Weight: 1
+  - m_Path: union_antebrazo.002
+    m_Weight: 1
+  - m_Path: union_anular_ra
+    m_Weight: 1
+  - m_Path: union_anular_ra.001
+    m_Weight: 1
+  - m_Path: union_anular_ra.002
+    m_Weight: 1
+  - m_Path: union_anular_ra.003
+    m_Weight: 1
+  - m_Path: union_anular_ra.004
+    m_Weight: 1
+  - m_Path: union_anular_ra.005
+    m_Weight: 1
+  - m_Path: union_cabeza
+    m_Weight: 1
+  - m_Path: union_corazon_ra
+    m_Weight: 1
+  - m_Path: union_corazon_ra.001
+    m_Weight: 1
+  - m_Path: union_corazon_ra.002
+    m_Weight: 1
+  - m_Path: union_corazon_ra.006
+    m_Weight: 1
+  - m_Path: union_corazon_ra.007
+    m_Weight: 1
+  - m_Path: union_corazon_ra.008
+    m_Weight: 1
+  - m_Path: union_Falda
+    m_Weight: 1
+  - m_Path: union_Falda.001
+    m_Weight: 1
+  - m_Path: union_Falda.002
+    m_Weight: 1
+  - m_Path: union_Falda.003
+    m_Weight: 1
+  - m_Path: union_Falda.004
+    m_Weight: 1
+  - m_Path: union_Falda.005
+    m_Weight: 1
+  - m_Path: union_indice_ra
+    m_Weight: 1
+  - m_Path: union_indice_ra.001
+    m_Weight: 1
+  - m_Path: union_indice_ra.002
+    m_Weight: 1
+  - m_Path: union_indice_ra.003
+    m_Weight: 1
+  - m_Path: union_indice_ra.004
+    m_Weight: 1
+  - m_Path: union_indice_ra.005
+    m_Weight: 1
+  - m_Path: union_JAmon
+    m_Weight: 1
+  - m_Path: union_JAmon.001
+    m_Weight: 1
+  - m_Path: union_menique_ra
+    m_Weight: 1
+  - m_Path: union_menique_ra.001
+    m_Weight: 1
+  - m_Path: union_menique_ra.002
+    m_Weight: 1
+  - m_Path: union_menique_ra.003
+    m_Weight: 1
+  - m_Path: union_menique_ra.004
+    m_Weight: 1
+  - m_Path: union_menique_ra.005
+    m_Weight: 1
+  - m_Path: union_Pulgar_ra
+    m_Weight: 1
+  - m_Path: union_Pulgar_ra.001
+    m_Weight: 1
+  - m_Path: union_Pulgar_ra.002
+    m_Weight: 1
+  - m_Path: union_Pulgar_ra.003
+    m_Weight: 1
+  - m_Path: union_tobillo
+    m_Weight: 1
+  - m_Path: union_tobillo.001
+    m_Weight: 1
+  - m_Path: ZAPATO
+    m_Weight: 1
+  - m_Path: ZAPATO.001
+    m_Weight: 1

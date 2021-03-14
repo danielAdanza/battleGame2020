@@ -8,7 +8,8 @@ public class AIMovement : Agent
 {
     private CharacterController controller;
     //the enemies target
-    public Transform target;
+    public Transform[] targets;
+    public GameObject thisGameObject;
 
     public float walkSpeed = 4f;
     public float runSpeed = 8f;
@@ -53,12 +54,6 @@ public class AIMovement : Agent
     public float attackRange = 0.5f;
     public string tagName = "Player3";
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     void Update()
     {
         if (canMove == true)
@@ -78,7 +73,8 @@ public class AIMovement : Agent
         {
             if (death == true)
             {
-                this.transform.position = respawnPoint.position;
+                Debug.Log("it entered in death");
+                //thisGameObject.transform.position = respawnPoint.position;
                 resurectionTime = Time.time + 3f;
                 death = false;
             }
@@ -86,12 +82,15 @@ public class AIMovement : Agent
             {
                 if (Time.time > resurectionTime)
                 { canMove = true; }
+                else
+                { thisGameObject.transform.position = respawnPoint.position; }
             }
         }
     }
 
     public override void OnEpisodeBegin()
     {
+
         controller = this.GetComponent<CharacterController>();
 
         health = maxHealth;
@@ -102,41 +101,147 @@ public class AIMovement : Agent
 
     public override void CollectObservations(VectorSensor sensor)
     {
-        sensor.AddObservation(target.localPosition);
-        sensor.AddObservation(this.transform.localPosition);
+        sensor.AddObservation(targets[0].localPosition);
+        sensor.AddObservation(targets[1].localPosition);
+        sensor.AddObservation(thisGameObject.transform.localPosition);
         sensor.AddObservation(controller.velocity);
     }
 
-
+    //vectorAction[0] == 0 means that the player can move if it´s one means the AI decided to move
+    //vectorAction[1] can be 0,1,2 for moving the x axis with -1,0 and 1
+    //VectorAction[2] can be 0,1,2 for moving the z axis -1,0 and 1
+    //VectorAction[3] can be 0,1,2 0 does nothing, 1 attacks melee and 2 makes distant attack
     public override void OnActionReceived(float[] vectorAction)
     {
-        Vector3 controlSignal = Vector3.zero;
-        controlSignal.x = vectorAction[0];
-
-        if (vectorAction[1] == 2)
+        if (canMove == false )
         {
-            controlSignal.z = 1;
+            if (death == true)
+            {
+                controller.Move(respawnPoint.position);
+                //thisGameObject.transform.localPosition = respawnPoint.position;
+                resurectionTime = Time.time + 3f;
+                death = false;
+            }
+            else
+            {
+                if (Time.time > resurectionTime)
+                {
+                    canMove = true;
+                }
+            }
+
         }
         else
         {
-            controlSignal.z = -vectorAction[1];
+            //Debug.Log("VectorAction[2]:" + vectorAction[2]);
+            //Debug.Log("VectorAction[3]:" + vectorAction[3]);
+
+            //new way of moving
+            Vector3 controlSignal = Vector3.zero;
+
+            if (vectorAction[0] == 0)
+            {
+                controlSignal.x = vectorAction[1] - 1;
+                controlSignal.z = vectorAction[2] - 1;
+            }
+
+            controller.Move(controlSignal * walkSpeed * Time.deltaTime);
+
+            if (vectorAction[3] == 1)
+            {
+                //melee attack
+                if (nextAttack <= Time.time)
+                {
+                    nextAttack = Time.time + coolDownMelee;
+
+                    Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange);
+
+                    foreach (Collider enemy in hitEnemies)
+                    {
+                        //checking if it hits the other players but not the current one
+                        if (enemy.gameObject.layer == 9 )
+                        {
+                            SetReward(attack);
+                            enemy.gameObject.GetComponent<PlayerMovement>().TakeDamage(attack, this.tagName, this.gameObject.transform.rotation);
+                        }
+                        else if (enemy.gameObject.layer == 11 && enemy.gameObject.tag != tagName)
+                        {
+                            SetReward(attack);
+                            enemy.gameObject.GetComponent<AIMovement>().TakeDamage(attack, this.tagName, this.gameObject.transform.rotation);
+                        }
+                    }
+                }
+            }
+            else if (vectorAction[3] == 2)
+            {
+                //distant attack
+                if (nextAttack <= Time.time)
+                {
+                    Quaternion rotation = Quaternion.Euler(0, this.transform.eulerAngles.y, 0);
+                    Instantiate(distantAttackObject, this.transform.position, rotation);
+                    nextAttack = Time.time + coolDownTime;
+                }
+            }
+
+
+            float distanceToTarget1 = Vector3.Distance(this.transform.localPosition, targets[0].localPosition);
+            float distanceToTarget2 = Vector3.Distance(this.transform.localPosition, targets[1].localPosition);
+            // Reached target
+            /*if (distanceToTarget1 < 1.42f | distanceToTarget2 < 1.42f)
+            {
+                SetReward(1.0f);
+            }*/
         }
 
-        controller.Move(controlSignal * walkSpeed * Time.deltaTime);
+    }
 
+    public void TakeDamage(int damage, string agresorTag, Quaternion rotation)
+    {
+        SetReward(-damage);
 
-        float distanceToTarget = Vector3.Distance(this.transform.localPosition, target.localPosition);
-        // Reached target
-        if (distanceToTarget < 1.42f)
+        if (canMove == true)
         {
-            SetReward(1.0f);
-            EndEpisode();
+
+            health -= damage;
+
+            //after taking damage or recuperating life health should never be less than 0 or more than the maxHealth
+            if (health > maxHealth)
+            { health = maxHealth; }
+            else if (health < 0)
+            { health = 0; }
+
+            marksController.SetHealth(health);
+
+            if (health <= 0)
+            { respawn(agresorTag); }
+
+            if (damage > 0 & agresorTag != "scenario")
+            {
+                //calculating the added force depending on the life remaining. The added force will be within 3 and 6:
+                //3 would be if you have zero life and 6 is if you have no life remaining
+                float forceFromLife = ((3f * health) / maxHealth + 3);
+                //they could push different depending on the scenarios
+                float scenarioForce = 5f;
+                //we get pushed and we give the direction multiplied by the forward vector, we input time.deltaTime so it does not depend on the frames
+                //the damage of the attack and the amount of life remaining 
+                controller.Move(rotation * Vector3.forward * Time.deltaTime * damage * bodyMass * forceFromLife * scenarioForce);
+            }
+
+            if (!canJump & isGrounded)
+            {
+                canJump = true;
+            }
         }
 
-        // Fell of platform
-        if (this.transform.localPosition.y < -5)
-        {
-            EndEpisode();
-        }
+    }
+
+    void respawn(string agresorTag)
+    {
+        SetReward(-3.0f);
+
+        canMove = false;
+        death = true;
+        health = maxHealth;
+        marksController.resurrection(agresorTag);
     }
 }
