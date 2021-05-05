@@ -27,6 +27,10 @@ public class DistantAttacks : MonoBehaviour
         {
             other.gameObject.GetComponent<PlayerMovement>().TakeDamage(damage, this.tagName, this.gameObject.transform.rotation);
             Destroy(this.gameObject);
+        } else if (other.gameObject.layer == 11 && other.gameObject.tag != tagName)
+        {
+            other.gameObject.GetComponent<AIMovement>().TakeDamage(damage, this.tagName, this.gameObject.transform.rotation);
+            Destroy(this.gameObject);
         }
     }
 }

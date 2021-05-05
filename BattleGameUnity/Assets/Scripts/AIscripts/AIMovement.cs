@@ -133,14 +133,19 @@ public class AIMovement : Agent
         }
         else
         {
-            //Debug.Log("VectorAction[2]:" + vectorAction[2]);
-            //Debug.Log("VectorAction[3]:" + vectorAction[3]);
-
             //new way of moving
             Vector3 controlSignal = Vector3.zero;
 
             if (vectorAction[0] == 0)
             {
+                float turnSmoothTime = 0.02f;
+                //this is the war angle where the player moves
+                float targetAngle = Mathf.Atan2(vectorAction[1] - 1, vectorAction[2] - 1) * Mathf.Rad2Deg;
+                //this is an smoother angle which progresively rotates his head
+                float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothTime, 0.02f);
+
+                transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
                 controlSignal.x = vectorAction[1] - 1;
                 controlSignal.z = vectorAction[2] - 1;
             }
@@ -180,28 +185,47 @@ public class AIMovement : Agent
                     Quaternion rotation = Quaternion.Euler(0, this.transform.eulerAngles.y, 0);
                     Instantiate(distantAttackObject, this.transform.position, rotation);
                     nextAttack = Time.time + coolDownTime;
+
+                    float degreesT1 = Vector2.Angle(thisGameObject.transform.position, targets[0].localPosition) / 100;
+                    float degreesT2 = Vector2.Angle(thisGameObject.transform.position, targets[1].localPosition) / 100;
+                    float degreesT3 = Vector2.Angle(thisGameObject.transform.position, targets[2].localPosition) / 100;
+
+                    if (targets[0].localPosition.x < thisGameObject.transform.position.x)
+                    { degreesT1 = -degreesT1; }
+
+                    if (targets[1].localPosition.x < thisGameObject.transform.position.x)
+                    { degreesT2 = -degreesT2; }
+
+                    if (targets[2].localPosition.x < thisGameObject.transform.position.x)
+                    { degreesT3 = -degreesT3; }
+
+                    if ( (thisGameObject.transform.rotation.y >= degreesT1 - 0.20) & (thisGameObject.transform.rotation.y <= degreesT1 + 0.20) )
+                    { SetReward(distantAttack); }
+
+                    if (thisGameObject.transform.rotation.y >= degreesT2 - 0.20 & thisGameObject.transform.rotation.y <= degreesT2 + 0.20)
+                    { SetReward(distantAttack); }
+
+                    if (thisGameObject.transform.rotation.y >= degreesT3 - 0.20 & thisGameObject.transform.rotation.y <= degreesT3 + 0.20)
+                    { SetReward(distantAttack); }
                 }
             }
 
 
-            float distanceToTarget1 = Vector3.Distance(this.transform.localPosition, targets[0].localPosition);
-            float distanceToTarget2 = Vector3.Distance(this.transform.localPosition, targets[1].localPosition);
-            // Reached target
-            /*if (distanceToTarget1 < 1.42f | distanceToTarget2 < 1.42f)
-            {
-                SetReward(1.0f);
-            }*/
+
         }
 
     }
 
     public void TakeDamage(int damage, string agresorTag, Quaternion rotation)
     {
-        SetReward(-damage);
+        if (damage > 30)
+        { SetReward(-30); }
+        else
+        { SetReward(-damage); }
+        
 
         if (canMove == true)
         {
-
             health -= damage;
 
             //after taking damage or recuperating life health should never be less than 0 or more than the maxHealth
@@ -237,11 +261,18 @@ public class AIMovement : Agent
 
     void respawn(string agresorTag)
     {
-        SetReward(-3.0f);
-
         canMove = false;
         death = true;
         health = maxHealth;
         marksController.resurrection(agresorTag);
+    }
+
+    public void finishEpisode ()
+    {
+        canMove = false;
+        EndEpisode();
+        if (thisGameObject != null) {
+            Destroy(thisGameObject);
+        }
     }
 }
